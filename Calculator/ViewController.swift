@@ -1,4 +1,4 @@
-// View
+// Controller
 import UIKit
 
 class ViewController: UIViewController {

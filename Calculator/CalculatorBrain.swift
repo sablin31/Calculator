@@ -1,8 +1,3 @@
-//
-//  CalculatorBrain.swift
-//  Calculator
-//
-//  Created by Алексей Саблин on 28.10.2021.
 //  Model
 
 import Foundation
