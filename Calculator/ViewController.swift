@@ -1,3 +1,4 @@
+// View
 import UIKit
 
 class ViewController: UIViewController {
@@ -43,19 +44,19 @@ class ViewController: UIViewController {
     }
     
     var displayResult: (result: Double?, isPending: Bool,
-                       description: String, error: String?) = (nil, false," ", nil){
+                        description: String, error: String?) = (nil, false," ", nil){
         
         // Наблюдатель Свойства модифицирует три IBOutlet метки
         didSet {
             switch displayResult {
-                case (nil, _, " ", nil) : displayValue = 0
-                case (let result, _,_,nil): displayValue = result
-                case (_, _,_,let error): display.text = error!
+            case (nil, _, " ", nil) : displayValue = 0
+            case (let result, _,_,nil): displayValue = result
+            case (_, _,_,let error): display.text = error!
             }
             
             history.text = displayResult.description != " " ?
-                    displayResult.description + (displayResult.isPending ? " …" : " =") : " "
-        //    print ("description = NN\(displayResult.description)NN")
+            displayResult.description + (displayResult.isPending ? " …" : " =") : " "
+            //    print ("description = NN\(displayResult.description)NN")
             displayM.text = formatter.string(from: NSNumber(value:variableValues["M"] ?? 0))
         }
     }
