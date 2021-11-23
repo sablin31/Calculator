@@ -1,7 +1,7 @@
 // Controller
 import UIKit
 
-class ViewController: UIViewController {
+class CalculatorViewController: UIViewController {
     
     @IBOutlet weak var display: UILabel!
     @IBOutlet weak var history: UILabel!
@@ -112,5 +112,33 @@ class ViewController: UIViewController {
             displayResult = brain.evaluate(using: variableValues)
             
         }
+    }
+    
+    private struct Storyboard {
+        static let ShowGraph = "Show Graph"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var destination = segue.destination
+        if let navigationController = destination as? UINavigationController {
+            destination = navigationController.visibleViewController ?? destination
+        }
+        if let identifier = segue.identifier,
+           identifier == Storyboard.ShowGraph,
+           let vc = destination as? GraphViewController {
+            vc.yForX = { [weak weakSelf = self] x in
+                weakSelf?.variableValues["M"] = x
+                return weakSelf?.brain.evaluate(using: weakSelf?.variableValues).result
+            }
+            vc.navigationItem.title = "y = " + brain.evaluate(using: variableValues).description
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == Storyboard.ShowGraph{
+            let result = brain.evaluate()
+            return !result.isPending
+        }
+        return false
     }
 }

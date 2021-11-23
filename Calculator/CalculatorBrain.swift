@@ -2,14 +2,12 @@
 
 import Foundation
 
-
 struct CalculatorBrain {
     
     private enum OpStack {
         case operand(Double)        // операнд
         case operation(String)      // операция
         case variable(String)       // переменная
-        
     }
     
     private var internalProgram = [OpStack]()
