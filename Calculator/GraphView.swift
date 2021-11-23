@@ -7,21 +7,17 @@
 
 import UIKit
 
-@IBDesignable
 class GraphView: UIView {
     
     var yForX: ((Double) -> Double?)? { didSet { setNeedsDisplay() } }
     
     var scale: CGFloat = 50.0 { didSet { setNeedsDisplay() } }
-    @IBInspectable
     var lineWidth: CGFloat = 2.0 { didSet { setNeedsDisplay() } }
-    @IBInspectable
     var color: UIColor = UIColor.blue { didSet { setNeedsDisplay() } }
-    @IBInspectable
     var colorAxes: UIColor = UIColor.black { didSet { setNeedsDisplay() } }
     
     var originSet: CGPoint? {didSet { setNeedsDisplay() } }
-    
+        
     private var origin: CGPoint {
         get {
             return originSet ?? CGPoint(x: self.bounds.midX, y: self.bounds.midY)

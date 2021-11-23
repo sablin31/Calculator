@@ -13,6 +13,12 @@ class CalculatorViewController: UIViewController {
     
     @IBOutlet weak var displayM: UILabel!
     
+    @IBOutlet weak var graphButton: UIButton! {
+        didSet {
+            graphButton.isEnabled = false
+            graphButton.backgroundColor = UIColor.lightGray
+        }
+    }
     let decimalSeparator = formatter.decimalSeparator ?? "."
     var userInTheMiddleOfTyping = false
     
@@ -46,8 +52,11 @@ class CalculatorViewController: UIViewController {
     var displayResult: (result: Double?, isPending: Bool,
                         description: String, error: String?) = (nil, false," ", nil){
         
-        // Наблюдатель Свойства модифицирует три IBOutlet метки
+        // Наблюдатель Свойства модифицирует три IBOutlet метки и кнопку График
         didSet {
+            graphButton.isEnabled = !displayResult.isPending
+            graphButton.backgroundColor = displayResult.isPending ? UIColor.lightGray : UIColor.white
+            
             switch displayResult {
             case (nil, _, " ", nil) : displayValue = 0
             case (let result, _,_,nil): displayValue = result

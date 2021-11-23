@@ -585,6 +585,7 @@
                     <connections>
                         <outlet property="display" destination="bE0-f6-dyb" id="LId-fq-UwE"/>
                         <outlet property="displayM" destination="ihb-PM-AAY" id="43S-Lv-jWp"/>
+                        <outlet property="graphButton" destination="xXI-N2-tdH" id="RLX-kE-Fu6"/>
                         <outlet property="history" destination="nAV-yt-54f" id="j8S-dS-bD7"/>
                         <outlet property="tochka" destination="ggx-CQ-2Fv" id="jbH-s8-eAD"/>
                     </connections>
