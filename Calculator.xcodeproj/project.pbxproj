@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		70176177272AB3A2007CD12F /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70176176272AB3A2007CD12F /* CalculatorBrain.swift */; };
+		705B7B03274D567C008648F8 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705B7B02274D567C008648F8 /* SplitViewController.swift */; };
 		708725CC274C0593004B8B70 /* AxesDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708725C9274C0593004B8B70 /* AxesDrawer.swift */; };
 		708725CD274C0593004B8B70 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708725CA274C0593004B8B70 /* GraphViewController.swift */; };
 		708725CE274C0593004B8B70 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708725CB274C0593004B8B70 /* GraphView.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		70176176272AB3A2007CD12F /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
+		705B7B02274D567C008648F8 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		708725C9274C0593004B8B70 /* AxesDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesDrawer.swift; sourceTree = "<group>"; };
 		708725CA274C0593004B8B70 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		708725CB274C0593004B8B70 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				70CBD46E273D7FA10074E1FA /* startlogo.png */,
 				70CF30812728835B0082E972 /* Calculator.xcdatamodeld */,
 				70176176272AB3A2007CD12F /* CalculatorBrain.swift */,
+				705B7B02274D567C008648F8 /* SplitViewController.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				70CF30792728835B0082E972 /* AppDelegate.swift in Sources */,
 				70176177272AB3A2007CD12F /* CalculatorBrain.swift in Sources */,
 				70CF307B2728835B0082E972 /* SceneDelegate.swift in Sources */,
+				705B7B03274D567C008648F8 /* SplitViewController.swift in Sources */,
 				708725CD274C0593004B8B70 /* GraphViewController.swift in Sources */,
 				708725CC274C0593004B8B70 /* AxesDrawer.swift in Sources */,
 				708725CE274C0593004B8B70 /* GraphView.swift in Sources */,

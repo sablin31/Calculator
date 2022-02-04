@@ -63,7 +63,7 @@
         <!--Split View Controller-->
         <scene sceneID="ozK-er-73i">
             <objects>
-                <splitViewController allowDoubleColumnStyle="YES" id="my2-uy-2PO" sceneMemberID="viewController">
+                <splitViewController allowDoubleColumnStyle="YES" id="my2-uy-2PO" customClass="SplitViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="ygj-Yb-WGD" kind="relationship" relationship="masterViewController" id="KRy-2x-zCi"/>
                         <segue destination="Xcd-FK-3gZ" kind="relationship" relationship="detailViewController" id="IQp-rt-f5W"/>
@@ -615,7 +615,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MrU-de-waV"/>
+        <segue reference="IQp-rt-f5W"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="graph" width="25" height="25"/>
